@@ -1,0 +1,67 @@
+git => gives some information about git
+
+git --version => shows the git version
+
+git --help => shows the git commands
+
+git --help [a command] => shows all information about that specified command
+
+git init => creates a git repository (.git folder) in current address. it is include of all our versions, commits, histories
+(master branch => main branch)
+
+git status => shows the current status of our project
+(untracked - modified)
+
+[git status] => untracked  => [git add] => staging area => [git commit -m "msg"] => our files store in repository
+[git status] => modified   => [git add] => staging area => [git commit -m "msg"] => our files store in repository
+git add [file name]/[.] => puts file or files to the staging status
+git commit -m "msg" => commits all files which are in staging status
+git commit [file]/[.] -m "msg" => commits file or files that are already on staging status
+git commit [file]/[.] -am "msg" => adds and then commits file or files that are already tracked and modified but there are not in staging status
+
+git restore --staged [.]/[file name] => restores file or files from stage status to modified status
+git restore [.]/[file name] => restores file or files from modified to before status
+
+git log => shows our activity history
+git log --oneline => shows summary of or activity history
+git log --oneline --graph => shows summary of or activity history as graph
+git shortlog => shows number of commits and their authors
+git shortlog -sn => shows number of commits and their authors briefly
+
+git config --list => shows the list of current system authors and current repository author
+git config user.name "[username]" => change the current repo author username
+git congig user.email "[email]"   => change the current repo author email
+
+git remote => shows the remotes for current system
+git remote add [remote name] [https link of github repository] => creates a remote connection to github repository
+
+git push -u [remote name] [branch] => pushes our project to specefied github repository
+git pull => get latest commits from github repository
+
+git branch => shows all existing branches of the current repository
+git branch -a => shows the local git branches and remote git branches
+git branch [name] => creates a branch
+git branch -m [old branch name] [new branch name] => changes the old branch name to the new branch name
+git branch --d [branch name] => deletes the specified branch
+git branch [-D]/[--d--force] [branch name] => forces git to delete specified branch, it's common when we have an unmerged branch
+
+git fetch -p => The -p flag means "prune". After fetching, branches which no longer exist on the remote will be deleted
+
+git checkout [branch name] => move to the specified branch
+git checkout -b [branch name] => creates and moves to the specified branch
+
+git merge master [branch name] => merges specified branch with master branch
+
+git clone [git rep address] => gets a copy of github repository
+git clone -b [branch name] [git rep address] => gets a copy of github repository on specified branch
+
+creating [.gitignore] file => git is going to ignore the desired files we writes in .gitignore file and won't push em in cloud repository
+git rm -r --cached [files] => moves specified file to untracked state. it is useful when we want to ignore a tracked file in git
+--d--force = -D => deletion
+
+
+
+
+
+
+
