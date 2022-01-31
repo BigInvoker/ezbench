@@ -1,0 +1,16 @@
+zig build -Drelease-fast=true
+
+-Drelease-safe=[bool]  optimizations on and safety on
+-Drelease-fast=[bool]  optimizations on and safety off
+-Drelease-small=[bool] size optimizations on and safety off
+
+
+
+dotnet build --configuration release
+
+cargo build --release
+
+go build
+
+gcc -O3 [fileName]
+g++ -O3 [fileName]
